@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+    <title>Index</title>
+</head>
+
+<body style="background: url({{ url_for('static', filename='bg.jpg') }}) no-repeat;">
+
+    <div class="wrapper">
+
+        <h1>Triodomino Image Segmentation</h1>
+
+        <h2><i>by Ivanov Egor, 317 academic group student</i></h2>
+
+        <div class="image_list_link"><a href="{{ url_for('images') }}">List of Images</a></div>
+
+    </div>
+
+</body>
+
+</html>
+

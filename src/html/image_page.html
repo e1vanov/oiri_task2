@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/image_page.css') }}">
+    <title>Image {{ ind }}</title>
+</head>
+
+<body>
+    <h1>Image {{ ind }}</h1>
+
+    <h2>Found {{ number_triangles }} triangles</h2>
+
+    {% for triag_info in triangles %}
+
+        <h3>{{ triag_info }}</h3>    
+
+    {% endfor %}
+
+    <div class="back_link"><a href="{{ url_for('images') }}">Back to list of Images</a></div>
+</body>
+
+</html>
+

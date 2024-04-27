@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/images.css') }}">
+    <title>Images</title>
+</head>
+
+<body style="background: url({{ url_for('static', filename='bg.jpg') }}) no-repeat;">
+
+    <div class="wrapper">
+
+        <h1>List of all Images</h1>
+
+        {% for ind in images_ind %}
+
+            <div class="element_wrapper">
+                <a href="{{ url_for('all_images', ind=ind) }}">Image {{ ind }}</a>
+            </div>
+
+        {% endfor %}
+
+        <div class="uploading_link"><a href="{{ url_for('new_image') }}">Upload new Image</a></div>
+
+    </div>
+
+</body>
+
+</html>
